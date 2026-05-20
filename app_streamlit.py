@@ -7,7 +7,7 @@ import json
 
 # 你可以让 root_path 固定，也可以让用户输入
 root_path = Path("data/stock_data")
-run_config = replace(max_config, llm_reranking=False, parallel_requests=1, answering_model="gpt-4o-mini-2024-07-18")
+run_config = replace(max_config, llm_reranking=True, parallel_requests=1, answering_model="gpt-4o-mini-2024-07-18")
 pipeline = Pipeline(root_path, run_config=run_config)
 
 def _normalize_answer(answer):
@@ -19,6 +19,7 @@ def _normalize_answer(answer):
                 "step_by_step_analysis": "",
                 "reasoning_summary": "",
                 "relevant_pages": [],
+                "references": [],
                 "final_answer": answer,
             }
 
@@ -27,6 +28,7 @@ def _normalize_answer(answer):
             "step_by_step_analysis": "",
             "reasoning_summary": "",
             "relevant_pages": [],
+            "references": [],
             "final_answer": answer,
         }
 
@@ -35,6 +37,7 @@ def _normalize_answer(answer):
             "step_by_step_analysis": answer.get("step_by_step_analysis", ""),
             "reasoning_summary": answer.get("reasoning_summary", ""),
             "relevant_pages": answer.get("relevant_pages", []),
+            "references": answer.get("references", []),
             "final_answer": answer.get("final_answer", ""),
         }
 
@@ -51,6 +54,7 @@ def _normalize_answer(answer):
                 "step_by_step_analysis": content.get("step_by_step_analysis", ""),
                 "reasoning_summary": content.get("reasoning_summary", ""),
                 "relevant_pages": content.get("relevant_pages", []),
+                "references": content.get("references", []),
                 "final_answer": content.get("final_answer", ""),
             }
 
@@ -65,6 +69,7 @@ def _normalize_answer(answer):
                 "step_by_step_analysis": inner.get("step_by_step_analysis", ""),
                 "reasoning_summary": inner.get("reasoning_summary", ""),
                 "relevant_pages": inner.get("relevant_pages", []),
+                "references": inner.get("references", []),
                 "final_answer": inner.get("final_answer", ""),
             }
 
@@ -77,6 +82,7 @@ def _normalize_answer(answer):
                     "step_by_step_analysis": parsed.get("step_by_step_analysis", ""),
                     "reasoning_summary": parsed.get("reasoning_summary", ""),
                     "relevant_pages": parsed.get("relevant_pages", []),
+                    "references": parsed.get("references", []),
                     "final_answer": parsed.get("final_answer", ""),
                 }
         except Exception:
@@ -86,6 +92,7 @@ def _normalize_answer(answer):
         "step_by_step_analysis": answer.get("step_by_step_analysis", ""),
         "reasoning_summary": answer.get("reasoning_summary", ""),
         "relevant_pages": answer.get("relevant_pages", []),
+        "references": answer.get("references", []),
         "final_answer": answer.get("final_answer", ""),
     }
 
@@ -117,6 +124,7 @@ if submit_btn and user_question.strip():
             step_by_step = normalized.get("step_by_step_analysis", "-") or "-"
             reasoning_summary = normalized.get("reasoning_summary", "-") or "-"
             relevant_pages = normalized.get("relevant_pages", [])
+            references = normalized.get("references", [])
             final_answer = normalized.get("final_answer", "-")
             # 打印调试
             print("[DEBUG] step_by_step_analysis:", step_by_step)
@@ -129,6 +137,14 @@ if submit_btn and user_question.strip():
             st.success(reasoning_summary)
             st.markdown("**相关页面：** ")
             st.write(relevant_pages)
+            st.markdown("**引用详情：**")
+            if references:
+                for ref in references:
+                    st.markdown(
+                        f"- `{ref.get('pdf_sha1', '')}` | `{ref.get('document_name', '')}` | `{ref.get('page', f'page {ref.get('page_index', '')}')}`"
+                    )
+            else:
+                st.write("暂无引用详情")
             st.markdown("**最终答案：**")
             st.markdown(f"<div style='background:#f6f8fa;padding:16px;border-radius:8px;font-size:18px;'>{final_answer}</div>", unsafe_allow_html=True)
         except Exception as e:

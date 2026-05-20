@@ -39,13 +39,19 @@ class JinaReranker:
 # LLMReranker：基于大模型的重排器，支持单条和批量重排
 class LLMReranker:
     def __init__(self, provider: str = "openai"):
-        # 支持 openai/dashscope，默认通过代理的 OpenAI 兼容接口
+        # 支持 openai/dashscope/local_qwen，默认通过代理的 OpenAI 兼容接口
         self.provider = provider.lower()
-        self.llm = self.set_up_llm()
+        self.llm = None
+        self.cross_encoder = None
         self.system_prompt_rerank_single_block = prompts.RerankingPrompt.system_prompt_rerank_single_block
         self.system_prompt_rerank_multiple_blocks = prompts.RerankingPrompt.system_prompt_rerank_multiple_blocks
         self.schema_for_single_block = prompts.RetrievalRankingSingleBlock
         self.schema_for_multiple_blocks = prompts.RetrievalRankingMultipleBlocks
+
+        if self.provider == "qwen3_rerank":
+            self.rerank_client = self.set_up_rerank_client()
+        else:
+            self.llm = self.set_up_llm()
       
     def set_up_llm(self):
         # 根据 provider 初始化 LLM 客户端
@@ -60,6 +66,12 @@ class LLMReranker:
             return dashscope
         else:
             raise ValueError(f"不支持的 LLM provider: {self.provider}")
+
+    def set_up_rerank_client(self):
+        load_dotenv(dotenv_path=Path(__file__).resolve().parents[1] / ".env")
+        api_key = os.getenv("AGICTO_API_KEY") or os.getenv("OPENAI_API_KEY")
+        base_url = os.getenv("AGICTO_BASE_URL") or os.getenv("OPENAI_BASE_URL") or "https://api.agicto.cn/v1"
+        return OpenAI(api_key=api_key, base_url=base_url)
     
     def get_rank_for_single_block(self, query, retrieved_document):
         # 针对单个文本块，调用LLM进行相关性评分
@@ -181,6 +193,33 @@ class LLMReranker:
         返回：
             按融合分数降序排序的文档列表
         """
+        if self.provider == "qwen3_rerank":
+            documents_text = [doc["text"] for doc in documents]
+            response = self.rerank_client.responses.create(
+                model="qwen3-rerank",
+                input={"query": query, "documents": documents_text},
+                temperature=0,
+            )
+            scores = []
+            output = getattr(response, "output", None)
+            if isinstance(output, list):
+                for item in output:
+                    score = getattr(item, "score", None)
+                    if score is None and isinstance(item, dict):
+                        score = item.get("score")
+                    scores.append(float(score) if score is not None else 0.0)
+            if len(scores) != len(documents):
+                scores = [0.0] * len(documents)
+
+            all_results = []
+            for doc, score in zip(documents, scores):
+                doc_with_score = doc.copy()
+                doc_with_score["relevance_score"] = float(score)
+                doc_with_score["combined_score"] = float(score)
+                all_results.append(doc_with_score)
+            all_results.sort(key=lambda x: x["combined_score"], reverse=True)
+            return all_results
+
         # 按batch分组
         doc_batches = [documents[i:i + documents_batch_size] for i in range(0, len(documents), documents_batch_size)]
         vector_weight = 1 - llm_weight

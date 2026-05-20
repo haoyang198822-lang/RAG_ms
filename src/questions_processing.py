@@ -21,6 +21,7 @@ class QuestionsProcessor:
         subset_path: Optional[Union[str, Path]] = None,
         parent_document_retrieval: bool = False,  # 是否启用父文档检索
         llm_reranking: bool = False,              # 是否启用LLM重排
+        llm_reranking_provider: str = "qwen3_rerank",
         llm_reranking_sample_size: int = 5,
         top_n_retrieval: int = 10,
         parallel_requests: int = 10,
@@ -37,6 +38,7 @@ class QuestionsProcessor:
         self.new_challenge_pipeline = new_challenge_pipeline
         self.return_parent_pages = parent_document_retrieval
         self.llm_reranking = llm_reranking
+        self.llm_reranking_provider = llm_reranking_provider
         self.llm_reranking_sample_size = llm_reranking_sample_size
         self.top_n_retrieval = top_n_retrieval
         self.answering_model = answering_model
@@ -64,7 +66,7 @@ class QuestionsProcessor:
         
         context_parts = []
         for result in retrieval_results:
-            page_number = result['page']
+            page_number = result['page'] + 1
             text = result['text']
             context_parts.append(f'Text retrieved from page {page_number}: \n"""\n{text}\n"""')
             
@@ -81,51 +83,61 @@ class QuestionsProcessor:
             print('警告：subset.csv 不是 utf-8 编码，自动尝试 gbk 编码...')
             self.companies_df = pd.read_csv(self.subset_path, encoding='gbk')
 
-        # Find the company's SHA1 from the subset CSV
+        # Find the company's SHA1 and document name from the subset CSV
         matching_rows = self.companies_df[self.companies_df['company_name'] == company_name]
         if matching_rows.empty:
             company_sha1 = ""
+            document_name = company_name
         else:
             company_sha1 = matching_rows.iloc[0]['sha1']
+            document_name = matching_rows.iloc[0].get('file_name', company_name)
 
         refs = []
         for page in pages_list:
-            refs.append({"pdf_sha1": company_sha1, "page_index": page})
+            refs.append({
+                "pdf_sha1": company_sha1,
+                "document_name": document_name,
+                "page": f"page {page + 1}",
+                "page_index": page + 1,
+            })
         return refs
 
     def _validate_page_references(self, claimed_pages: list, retrieval_results: list, min_pages: int = 2, max_pages: int = 8) -> list:
         """
         校验LLM答案中引用的页码是否真实存在于检索结果中。
-        若不足最小页数，则补充检索结果中的top页。
+        返回 1-based 页码，便于对外展示。
         """
         if claimed_pages is None:
             claimed_pages = []
-        
-        retrieved_pages = [result['page'] for result in retrieval_results]
-        
-        validated_pages = [page for page in claimed_pages if page in retrieved_pages]
-        
-        if len(validated_pages) < len(claimed_pages):
-            removed_pages = set(claimed_pages) - set(validated_pages)
+
+        # 模型输出和检索结果内部都按 1-based 对外展示，但检索源数据本身仍是 0-based
+        # 这里先统一转为内部编号做校验，最后再转回 1-based
+        claimed_pages_internal = [page - 1 for page in claimed_pages if isinstance(page, int) and page > 0]
+        retrieved_pages_internal = [result['page'] for result in retrieval_results]
+
+        validated_pages_internal = [page for page in claimed_pages_internal if page in retrieved_pages_internal]
+
+        if len(validated_pages_internal) < len(claimed_pages_internal):
+            removed_pages = set(claimed_pages_internal) - set(validated_pages_internal)
             print(f"Warning: Removed {len(removed_pages)} hallucinated page references: {removed_pages}")
-        
-        if len(validated_pages) < min_pages and retrieval_results:
-            existing_pages = set(validated_pages)
-            
+
+        if len(validated_pages_internal) < min_pages and retrieval_results:
+            existing_pages = set(validated_pages_internal)
+
             for result in retrieval_results:
                 page = result['page']
                 if page not in existing_pages:
-                    validated_pages.append(page)
+                    validated_pages_internal.append(page)
                     existing_pages.add(page)
-                    
-                    if len(validated_pages) >= min_pages:
+
+                    if len(validated_pages_internal) >= min_pages:
                         break
-        
-        if len(validated_pages) > max_pages:
-            print(f"Trimming references from {len(validated_pages)} to {max_pages} pages")
-            validated_pages = validated_pages[:max_pages]
-        
-        return validated_pages
+
+        if len(validated_pages_internal) > max_pages:
+            print(f"Trimming references from {len(validated_pages_internal)} to {max_pages} pages")
+            validated_pages_internal = validated_pages_internal[:max_pages]
+
+        return [page + 1 for page in validated_pages_internal]
 
     def get_answer_for_company(self, company_name: str, question: str, schema: str) -> dict:
         # 针对单个公司，检索上下文并调用LLM生成答案
@@ -135,7 +147,7 @@ class QuestionsProcessor:
                 vector_db_dir=self.vector_db_dir,
                 documents_dir=self.documents_dir,
                 embedding_provider=self.embedding_provider,
-                reranking_provider=self.api_provider
+                reranking_provider=self.llm_reranking_provider
             )
         else:
             retriever = VectorRetriever(
@@ -420,7 +432,9 @@ class QuestionsProcessor:
                 references = [
                     {
                         "pdf_sha1": ref["pdf_sha1"],
-                        "page_index": ref["page_index"] - 1
+                        "page_index": ref["page_index"] - 1,
+                        "document_name": ref.get("document_name", ""),
+                        "page": ref.get("page", f"page {ref['page_index']}")
                     }
                     for ref in references
                 ]

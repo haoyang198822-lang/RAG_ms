@@ -58,6 +58,7 @@ class RunConfig:
     use_vector_dbs: bool = True
     use_bm25_db: bool = False
     llm_reranking: bool = False
+    llm_reranking_provider: str = "qwen3_rerank"
     llm_reranking_sample_size: int = 30
     top_n_retrieval: int = 10
     parallel_requests: int = 1 # 并行的数量，需要限制，否则qwen-turbo会超出阈值
@@ -222,6 +223,7 @@ class Pipeline:
             subset_path=self.paths.subset_path,
             parent_document_retrieval=self.run_config.parent_document_retrieval,
             llm_reranking=self.run_config.llm_reranking,
+            llm_reranking_provider=self.run_config.llm_reranking_provider,
             llm_reranking_sample_size=self.run_config.llm_reranking_sample_size,
             top_n_retrieval=self.run_config.top_n_retrieval,
             parallel_requests=self.run_config.parallel_requests,
@@ -254,6 +256,7 @@ class Pipeline:
             subset_path=self.paths.subset_path,
             parent_document_retrieval=self.run_config.parent_document_retrieval,
             llm_reranking=self.run_config.llm_reranking,
+            llm_reranking_provider="qwen3_rerank",
             llm_reranking_sample_size=self.run_config.llm_reranking_sample_size,
             top_n_retrieval=self.run_config.top_n_retrieval,
             parallel_requests=1,
@@ -296,7 +299,7 @@ max_config = RunConfig(
     llm_reranking=True,
     parallel_requests=4,
     submission_file=True,
-    pipeline_details="Custom pdf parsing + vDB + Router + Parent Document Retrieval + reranking + SO CoT; llm = qwen-turbo",
+    pipeline_details="Custom pdf parsing + vDB + Router + Parent Document Retrieval + qwen3-rerank + SO CoT; llm = qwen-turbo",
     api_provider="openai",
     answering_model="qwen-turbo-latest",
     config_suffix="_qwen_turbo"
