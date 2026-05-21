@@ -4,10 +4,9 @@ import pickle
 from typing import List, Union
 from pathlib import Path
 from tqdm import tqdm
-import hashlib
 
 from dotenv import load_dotenv
-from openai import OpenAI
+import requests
 from rank_bm25 import BM25Okapi
 import faiss
 import numpy as np
@@ -54,67 +53,79 @@ class BM25Ingestor:
 # VectorDBIngestor：向量库构建与保存工具
 class VectorDBIngestor:
     def __init__(self):
-        # 初始化DashScope API Key
-        dashscope.api_key = os.getenv("DASHSCOPE_API_KEY")
+        load_dotenv(dotenv_path=Path(__file__).resolve().parents[1] / ".env")
+        self.api_key = os.getenv("AGICTO_API_KEY") or os.getenv("OPENAI_API_KEY")
+        self.base_url = os.getenv("AGICTO_BASE_URL") or os.getenv("OPENAI_BASE_URL") or "https://api.agicto.cn/v1"
+        self.embedding_model = os.getenv("AGICTO_EMBEDDING_MODEL") or os.getenv("OPENAI_EMBEDDING_MODEL") or "text-embedding-v4"
+
+    def _parse_embedding_response(self, response_json):
+        if isinstance(response_json, dict):
+            if isinstance(response_json.get("data"), list) and response_json["data"]:
+                first_item = response_json["data"][0]
+                if isinstance(first_item, dict) and "embedding" in first_item:
+                    return [item["embedding"] for item in response_json["data"] if item.get("embedding")]
+            if isinstance(response_json.get("output"), dict):
+                output = response_json["output"]
+                if isinstance(output.get("embeddings"), list) and output["embeddings"]:
+                    embeddings = []
+                    for item in output["embeddings"]:
+                        if isinstance(item, dict) and item.get("embedding"):
+                            embeddings.append(item["embedding"])
+                    if embeddings:
+                        return embeddings
+                if isinstance(output.get("embedding"), list) and output["embedding"]:
+                    return [output["embedding"]]
+            if isinstance(response_json.get("embedding"), list) and response_json["embedding"]:
+                return [response_json["embedding"]]
+        raise ValueError(f"无法解析 embedding 返回格式: {response_json}")
 
     @retry(wait=wait_fixed(20), stop=stop_after_attempt(2))
-    def _get_embeddings(self, text: Union[str, List[str]], model: str = "text-embedding-v1") -> List[float]:
-        # 获取文本或文本块的嵌入向量，支持重试（使用阿里云DashScope，分批处理）
+    def _get_embeddings(self, text: Union[str, List[str]], model: str = "text-embedding-v4") -> List[float]:
         if isinstance(text, str) and not text.strip():
             raise ValueError("Input text cannot be an empty string.")
-        
-        # 保证 input 为一维字符串列表或单个字符串
+
         if isinstance(text, list):
             text_chunks = text
         else:
             text_chunks = [text]
 
-        # 类型检查，确保每一项都是字符串
         if not all(isinstance(x, str) for x in text_chunks):
             raise ValueError("所有待嵌入文本必须为字符串类型！实际类型: {}".format([type(x) for x in text_chunks]))
 
-        # 过滤空字符串
         text_chunks = [x for x in text_chunks if x.strip()]
         if not text_chunks:
             raise ValueError("所有待嵌入文本均为空字符串！")
+
         print('start embedding ================================')
         embeddings = []
-        MAX_BATCH_SIZE = 25
-        LOG_FILE = 'embedding_error.log'
+        MAX_BATCH_SIZE = 10
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Content-Type": "application/json",
+        }
         for i in range(0, len(text_chunks), MAX_BATCH_SIZE):
-            batch = text_chunks[i:i+MAX_BATCH_SIZE]
-            resp = TextEmbedding.call(
-                model=TextEmbedding.Models.text_embedding_v1,
-                input=batch
+            batch = text_chunks[i:i + MAX_BATCH_SIZE]
+            payload = {
+                "model": model or self.embedding_model,
+                "input": batch,
+            }
+            resp = requests.post(
+                f"{self.base_url.rstrip('/')}/embeddings",
+                headers=headers,
+                json=payload,
+                timeout=120,
             )
-            # print('i=',i)
-            # print('resp=',resp)
-            # with open(LOG_FILE, 'a', encoding='utf-8') as f:
-            #     f.write('i='+str(i)+'\n')
-            #     f.write('resp='+str(resp)+'\n')
-            # 兼容单条和多条输入
-            #print('resp=',resp)
-            # with open(LOG_FILE, 'a', encoding='utf-8') as f:
-            #     f.write('resp='+str(resp)+'\n')
-            if 'output' in resp and 'embeddings' in resp['output']:
-                print('11111111')
-                for emb in resp['output']['embeddings']:
-                    if emb['embedding'] is None or len(emb['embedding']) == 0:
-                        error_text = batch[emb.text_index] if hasattr(emb, 'text_index') else None
-                        with open(LOG_FILE, 'a', encoding='utf-8') as f:
-                            f.write(f"DashScope返回的embedding为空，text_index={getattr(emb, 'text_index', None)}，文本内容如下：\n{error_text}\n{'-'*60}\n")
-                        raise RuntimeError(f"DashScope返回的embedding为空，text_index={getattr(emb, 'text_index', None)}，文本内容已写入 {LOG_FILE}")
-                    embeddings.append(emb['embedding'])
-            elif 'output' in resp and 'embedding' in resp['output']:
-                if resp['output']['embedding'] is None or len(resp['output']['embedding']) == 0:
-                    print('22222222')
-                    with open(LOG_FILE, 'a', encoding='utf-8') as f:
-                        f.write("DashScope返回的embedding为空，文本内容如下：\n{}\n{}\n".format(batch[0] if batch else None, '-'*60))
-                    raise RuntimeError("DashScope返回的embedding为空，文本内容已写入 {}".format(LOG_FILE))
-                embeddings.append(resp.output.embedding)
-            else:
-                print('33333333')
-                raise RuntimeError(f"DashScope embedding API返回格式异常: {resp}")
+            resp.raise_for_status()
+            response_json = resp.json()
+            batch_embeddings = self._parse_embedding_response(response_json)
+            if len(batch_embeddings) != len(batch):
+                raise ValueError(
+                    f"embedding 返回条数与输入不一致，input={len(batch)}，output={len(batch_embeddings)}，response={response_json}"
+                )
+            for idx, emb in enumerate(batch_embeddings):
+                if emb is None or len(emb) == 0:
+                    raise RuntimeError(f"Embedding返回为空，batch_index={i + idx}")
+                embeddings.append(emb)
         return embeddings
 
     def _create_vector_db(self, embeddings: List[float]):

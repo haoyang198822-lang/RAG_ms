@@ -67,6 +67,7 @@ class RunConfig:
     full_context: bool = False
     api_provider: str = "dashscope" #openai
     answering_model: str = "qwen-turbo-latest" # gpt-4o-mini-2024-07-18 or "gpt-4o-2024-08-06"
+    embedding_model: str = "text-embedding-v4"
     config_suffix: str = ""
 
 class Pipeline:
@@ -115,26 +116,43 @@ class Pipeline:
 
     def export_reports_to_markdown(self, file_name):
         """
-        使用 pdf_mineru.py，将指定 PDF 文件转换为 markdown，并放到 reports_markdown_dirname 目录下。
+        使用 pdf_mineru.py，将指定远程 PDF 文件转换为 markdown，并放到 reports_markdown_dirname 目录下。
         :param file_name: PDF 文件名（如 '【财报】中芯国际：中芯国际2024年年度报告.pdf'）
         """
-        # 调用 pdf_mineru 获取 task_id 并下载、解压
-        print(f"开始处理: {file_name}")
+        print(f"开始处理远程文件: {file_name}")
         task_id = pdf_mineru.get_task_id(file_name)
         print(f"task_id: {task_id}")
         pdf_mineru.get_result(task_id)
 
-        # 解压后目录名与 task_id 相同
         extract_dir = f"{task_id}"
         md_path = os.path.join(extract_dir, "full.md")
         if not os.path.exists(md_path):
             print(f"未找到 markdown 文件: {md_path}")
             return
-        # 目标目录
         os.makedirs(self.paths.reports_markdown_path, exist_ok=True)
-        # 目标文件名为原始 file_name，扩展名改为 .md
         base_name = os.path.splitext(file_name)[0]
         target_path = os.path.join(self.paths.reports_markdown_path, f"{base_name}.md")
+        shutil.move(md_path, target_path)
+        print(f"已将 {md_path} 移动到 {target_path}")
+
+    def export_local_pdf_to_markdown(self, pdf_path):
+        """
+        使用 MinerU 的本地文件上传接口，将本地 PDF 转换为 markdown，并放到 reports_markdown_dirname 目录下。
+        :param pdf_path: 本地 PDF 路径
+        """
+        pdf_path = Path(pdf_path)
+        print(f"开始处理本地文件: {pdf_path}")
+        batch_id = pdf_mineru.get_task_id_from_local_file(pdf_path)
+        print(f"batch_id: {batch_id}")
+        pdf_mineru.get_result_by_batch_id(batch_id)
+
+        extract_dir = pdf_path.stem
+        md_path = os.path.join(extract_dir, "full.md")
+        if not os.path.exists(md_path):
+            print(f"未找到 markdown 文件: {md_path}")
+            return
+        os.makedirs(self.paths.reports_markdown_path, exist_ok=True)
+        target_path = os.path.join(self.paths.reports_markdown_path, f"{pdf_path.stem}.md")
         shutil.move(md_path, target_path)
         print(f"已将 {md_path} 移动到 {target_path}")
 
@@ -316,27 +334,18 @@ configs = {"base": base_config,
 # 只需取消你想运行的方法的注释即可
 # 你也可以修改 run_config 以尝试不同的配置
 if __name__ == "__main__":
-    # 设置数据集根目录（此处以 test_set 为例）
+    # 设置数据集根目录（此处以 stock_data 为例）
     root_path = here() / "data" / "stock_data"
     print('root_path:', root_path)
-    #print(type(root_path))
-    # 初始化主流程，使用推荐的最佳配置
     pipeline = Pipeline(root_path, run_config=max_config)
-    
-    print('4. 将pdf转化为纯markdown文本')
-    #pipeline.export_reports_to_markdown('【财报】中芯国际：中芯国际2024年年度报告.pdf') 
 
-    # 5. 将规整后报告分块，便于后续向量化，输出到 databases/chunked_reports
-    print('5. 将规整后报告分块，便于后续向量化，输出到 databases/chunked_reports')
-    pipeline.chunk_reports() 
-    
-    # 6. 从分块报告创建向量数据库，输出到 databases/vector_dbs
-    print('6. 从分块报告创建向量数据库，输出到 databases/vector_dbs')
-    pipeline.create_vector_dbs()     
-    
-    # 7. 处理问题并生成答案，具体逻辑取决于 run_config
-    # 默认questions.json
-    print('7. 处理问题并生成答案，具体逻辑取决于 run_config')
-    pipeline.process_questions() 
-    
+    pdf_file = root_path / "pdf_reports" / "中芯国际机构调研纪要.pdf"
+
+    print('4. 将本地 PDF 转化为纯 markdown 文本')
+    pipeline.export_local_pdf_to_markdown(pdf_file)
+
+    print('5. 基于解析后的 markdown 构建向量库')
+    pipeline.chunk_reports()
+    pipeline.create_vector_dbs()
+
     print('完成')

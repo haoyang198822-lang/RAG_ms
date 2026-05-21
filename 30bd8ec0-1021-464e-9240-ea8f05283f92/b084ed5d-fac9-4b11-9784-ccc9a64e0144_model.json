@@ -1,0 +1,3345 @@
+[
+    {
+        "layout_dets": [
+            {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.9655,
+                "bbox": [
+                    92,
+                    33,
+                    436,
+                    129
+                ],
+                "index": 1
+            },
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.5934,
+                "bbox": [
+                    1211,
+                    16,
+                    1570,
+                    66
+                ],
+                "index": 2
+            },
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.952,
+                "bbox": [
+                    92,
+                    171,
+                    1004,
+                    290
+                ],
+                "index": 3
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.9145,
+                "bbox": [
+                    98,
+                    406,
+                    225,
+                    446
+                ],
+                "index": 4
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9853,
+                "bbox": [
+                    75,
+                    478,
+                    1044,
+                    634
+                ],
+                "index": 5
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9866,
+                "bbox": [
+                    74,
+                    642,
+                    1050,
+                    837
+                ],
+                "index": 6
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.986,
+                "bbox": [
+                    74,
+                    846,
+                    1051,
+                    1117
+                ],
+                "index": 7
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9862,
+                "bbox": [
+                    74,
+                    1126,
+                    1053,
+                    1361
+                ],
+                "index": 8
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.9357,
+                "bbox": [
+                    98,
+                    1390,
+                    371,
+                    1430
+                ],
+                "index": 9
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9812,
+                "bbox": [
+                    76,
+                    1462,
+                    1054,
+                    1576
+                ],
+                "index": 10
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.9419,
+                "bbox": [
+                    77,
+                    1578,
+                    206,
+                    1614
+                ],
+                "index": 11
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.972,
+                "bbox": [
+                    75,
+                    1618,
+                    1053,
+                    1693
+                ],
+                "index": 12
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8434,
+                "bbox": [
+                    100,
+                    1712,
+                    344,
+                    1750
+                ],
+                "index": 13
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9851,
+                "bbox": [
+                    74,
+                    1760,
+                    1070,
+                    2232
+                ],
+                "index": 14,
+                "html": "<table><tr><td></td><td>2023A</td><td>2024A</td><td>2025E</td><td>2026E</td><td>2027E</td></tr><tr><td>营业收入(百万元)</td><td>45,250</td><td>57,796</td><td>69,402</td><td>78,592</td><td>88,944</td></tr><tr><td>同比增长(%)</td><td>-9%</td><td>28%</td><td>20%</td><td>13%</td><td>13%</td></tr><tr><td>营业利润(百万元)</td><td>6.906</td><td>6,299</td><td>7,985</td><td>9,991</td><td>11,555</td></tr><tr><td>同比增长(%)</td><td>-53%</td><td>-9%</td><td>27%</td><td>25%</td><td>16%</td></tr><tr><td>归属母公司净利润(百万元)</td><td>4,823</td><td>3,699</td><td>5,614</td><td>6,800</td><td>7,866</td></tr><tr><td>同比增长(%)</td><td>-60%</td><td>-23%</td><td>52%</td><td>21%</td><td>16%</td></tr><tr><td>每股收益（元）</td><td>0.60</td><td>0.46</td><td>0.70</td><td>0.85</td><td>0.99</td></tr><tr><td>毛利率(%)</td><td>21.9%</td><td>18.6%</td><td>21.0%</td><td>22.2%</td><td>22.5%</td></tr><tr><td>净利率(%)</td><td>10.7%</td><td>6.4%</td><td>8.1%</td><td>8.7%</td><td>8.8%</td></tr><tr><td>净资产收益率(%)</td><td>3.5%</td><td>2.5%</td><td>3.8%</td><td>4.5%</td><td>4.9%</td></tr><tr><td>市盈率</td><td>149</td><td>194</td><td>128</td><td>106</td><td>91</td></tr><tr><td>市净率</td><td>5.0</td><td>4.8</td><td>4.8</td><td>4.6</td><td>4.4</td></tr></table>"
+            },
+            {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.7905,
+                "bbox": [
+                    76,
+                    2237,
+                    724,
+                    2264
+                ],
+                "index": 15
+            },
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.6374,
+                "bbox": [
+                    1197,
+                    78,
+                    1570,
+                    127
+                ],
+                "index": 16
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7739,
+                "bbox": [
+                    1133,
+                    172,
+                    1229,
+                    206
+                ],
+                "index": 17
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7968,
+                "bbox": [
+                    1420,
+                    172,
+                    1607,
+                    210
+                ],
+                "index": 18
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8042,
+                "bbox": [
+                    1111,
+                    217,
+                    1619,
+                    251
+                ],
+                "index": 19
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8374,
+                "bbox": [
+                    1111,
+                    254,
+                    1618,
+                    287
+                ],
+                "index": 20
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8274,
+                "bbox": [
+                    1111,
+                    290,
+                    1619,
+                    324
+                ],
+                "index": 21
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8193,
+                "bbox": [
+                    1111,
+                    326,
+                    1619,
+                    360
+                ],
+                "index": 22
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8002,
+                "bbox": [
+                    1111,
+                    362,
+                    1619,
+                    396
+                ],
+                "index": 23
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7635,
+                "bbox": [
+                    1111,
+                    400,
+                    1618,
+                    431
+                ],
+                "index": 24
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8095,
+                "bbox": [
+                    1111,
+                    435,
+                    1617,
+                    467
+                ],
+                "index": 25
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7557,
+                "bbox": [
+                    1110,
+                    471,
+                    1617,
+                    504
+                ],
+                "index": 26
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.791,
+                "bbox": [
+                    1132,
+                    537,
+                    1229,
+                    569
+                ],
+                "index": 27
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9614,
+                "bbox": [
+                    1109,
+                    580,
+                    1626,
+                    722
+                ],
+                "index": 28,
+                "html": "<table><tr><td colspan=\"2\">1周</td><td rowspan=\"2\">1月</td><td rowspan=\"2\">3月</td><td rowspan=\"2\">12月</td></tr><tr><td></td><td></td></tr><tr><td>绝对表现%</td><td>-3.62</td><td>-4.82</td><td>-16.29</td><td>96.32</td></tr><tr><td>相对表现%</td><td>-5.62</td><td>-9.14</td><td>-15.09</td><td>91.36</td></tr><tr><td>沪深300%</td><td>2</td><td>4.32</td><td>-1.2</td><td>4.96</td></tr></table>"
+            },
+            {
+                "cls_id": 3,
+                "label": "chart",
+                "score": 0.9684,
+                "bbox": [
+                    1123,
+                    754,
+                    1607,
+                    1030
+                ],
+                "index": 29
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7966,
+                "bbox": [
+                    1134,
+                    1067,
+                    1250,
+                    1099
+                ],
+                "index": 30
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.8623,
+                "bbox": [
+                    1121,
+                    1109,
+                    1583,
+                    1401
+                ],
+                "index": 31,
+                "html": "<table><tr><td>蒯剑</td><td>021-63325888*8514</td></tr><tr><td></td><td>kuaijian@orientsec.com.cn</td></tr><tr><td></td><td>执业证书编号：S0860514050005</td></tr><tr><td></td><td>香港证监会牌照：BPT856</td></tr><tr><td>韩潇锐</td><td>hanxiaorui@orientsec.com.cn</td></tr><tr><td></td><td>执业证书编号：S0860523080004</td></tr><tr><td>薛宏伟</td><td>xuehongwei@orientsec.com.cn</td></tr><tr><td></td><td>执业证书编号：S0860524110001</td></tr></table>"
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8104,
+                "bbox": [
+                    1130,
+                    1427,
+                    1205,
+                    1461
+                ],
+                "index": 32
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9072,
+                "bbox": [
+                    1124,
+                    1478,
+                    1523,
+                    1515
+                ],
+                "index": 33
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.9051,
+                "bbox": [
+                    1134,
+                    1568,
+                    1228,
+                    1602
+                ],
+                "index": 34
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9404,
+                "bbox": [
+                    1110,
+                    1616,
+                    1614,
+                    1680
+                ],
+                "index": 35
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9367,
+                "bbox": [
+                    1110,
+                    1684,
+                    1613,
+                    1747
+                ],
+                "index": 36
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9411,
+                "bbox": [
+                    1108,
+                    1750,
+                    1613,
+                    1816
+                ],
+                "index": 37
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.5535,
+                "bbox": [
+                    137,
+                    2267,
+                    1500,
+                    2299
+                ],
+                "index": 38
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    203,
+                    38,
+                    440,
+                    106
+                ],
+                "score": 1.0,
+                "text": "东方证券"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    210,
+                    100,
+                    435,
+                    125
+                ],
+                "score": 0.996,
+                "text": "ORIENTSECURITIES"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1216,
+                    17,
+                    1568,
+                    65
+                ],
+                "score": 0.984,
+                "text": "公司研究|季报点评"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1200,
+                    79,
+                    1570,
+                    126
+                ],
+                "score": 1.0,
+                "text": "中芯国际688981.SH"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1123,
+                    1476,
+                    1183,
+                    1515
+                ],
+                "score": 1.0,
+                "text": "朱茜"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1262,
+                    1481,
+                    1522,
+                    1513
+                ],
+                "score": 0.999,
+                "text": "zhuqian@orientsec.com.cn"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    94,
+                    173,
+                    995,
+                    230
+                ],
+                "score": 0.996,
+                "text": "产能利用率提升，持续推进工艺迭代和产"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    95,
+                    230,
+                    356,
+                    288
+                ],
+                "score": 1.0,
+                "text": "品性能升级"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    93,
+                    399,
+                    231,
+                    452
+                ],
+                "score": 0.998,
+                "text": "核心观点"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    75,
+                    1575,
+                    206,
+                    1618
+                ],
+                "score": 0.999,
+                "text": "风险提示"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1127,
+                    165,
+                    1236,
+                    212
+                ],
+                "score": 0.999,
+                "text": "投资评级"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1127,
+                    531,
+                    1234,
+                    574
+                ],
+                "score": 0.999,
+                "text": "股价表现"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1130,
+                    1063,
+                    1255,
+                    1103
+                ],
+                "score": 0.999,
+                "text": "证券分析师"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1129,
+                    1563,
+                    1234,
+                    1607
+                ],
+                "score": 0.999,
+                "text": "相关报告"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    126,
+                    482,
+                    1038,
+                    514
+                ],
+                "score": 1.0,
+                "text": "中芯国际发布2025年一季报。25年第一季度，公司实现营业收入163亿元，同比"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    128,
+                    523,
+                    1039,
+                    551
+                ],
+                "score": 1.0,
+                "text": "增长29%；按照国际财务报告准则，毛利率为22.5%，环比大致持平。由于工厂生"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    126,
+                    561,
+                    1033,
+                    593
+                ],
+                "score": 1.0,
+                "text": "产性波动，一季度后半部平均销售单价下降，该影响会延续到二季度；二季度，公"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    126,
+                    598,
+                    895,
+                    633
+                ],
+                "score": 1.0,
+                "text": "司给出的收入指引为环比下降4%到6%，毛利率指引为18%到20%。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    122,
+                    1465,
+                    1049,
+                    1497
+                ],
+                "score": 1.0,
+                "text": "我们预测公司25-27年归母净利润分别为56.1/68.0/78.7亿元（原25-26年预测为"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    125,
+                    1503,
+                    1049,
+                    1537
+                ],
+                "score": 1.0,
+                "text": "56.1/71.0亿元，主要调整了营收和毛利率），采用DCF估值法，给予129.48元目"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    125,
+                    1543,
+                    373,
+                    1575
+                ],
+                "score": 1.0,
+                "text": "标价，维持买入评级。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    121,
+                    646,
+                    1049,
+                    678
+                ],
+                "score": 1.0,
+                "text": "持续产能扩充，产能和产能利用率同步提升。25Q1，公司整体出货量为229万片折"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    127,
+                    685,
+                    986,
+                    716
+                ],
+                "score": 1.0,
+                "text": "合8英寸标准逻辑晶圆，出货量环比增长15%；公司25Q1产能利用率上升至"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    126,
+                    725,
+                    1037,
+                    756
+                ],
+                "score": 0.999,
+                "text": "89.6%，环比增长4.1pct。其中，12英寸产能利用率保持稳健，8英寸产能利用率"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    126,
+                    762,
+                    1035,
+                    795
+                ],
+                "score": 1.0,
+                "text": "上升至12英寸厂的平均水平。公司2-3年内，预计仍将保持每年5万片12英寸晶"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    127,
+                    803,
+                    809,
+                    834
+                ],
+                "score": 1.0,
+                "text": "圆上下的产能增长，与75亿美元左右的资产开支规划相对应。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    126,
+                    852,
+                    1044,
+                    879
+                ],
+                "score": 0.999,
+                "text": "工业与汽车收入环比增长超两成。2025年第一季度，公司晶圆收入按应用分，智能"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    128,
+                    891,
+                    975,
+                    918
+                ],
+                "score": 0.994,
+                "text": "手机、电脑与平板、消费电子、互联与可穿戴、工业与汽车占比分别为24%，"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    126,
+                    927,
+                    1049,
+                    960
+                ],
+                "score": 1.0,
+                "text": "17%，41%，8%和10%，主要受益于国际形势变化引起的客户提拉出货、国内以旧"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    126,
+                    966,
+                    1034,
+                    997
+                ],
+                "score": 1.0,
+                "text": "换新、消费补贴等政策推动的大中类产品需求的上升，以及工业与汽车产业的触底"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    126,
+                    1005,
+                    1033,
+                    1036
+                ],
+                "score": 1.0,
+                "text": "补货。尤其是汽车电子，得益于主要客户在汽车领域取得的进展和公司过去几年加"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    125,
+                    1044,
+                    1039,
+                    1074
+                ],
+                "score": 1.0,
+                "text": "大对汽车电子平台的投入和重点布局，在BCD、CIS、MCU、域控制器等领域与产"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    128,
+                    1085,
+                    669,
+                    1112
+                ],
+                "score": 1.0,
+                "text": "业链紧密合作，公司车规产品的出货量稳步提升。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    124,
+                    1131,
+                    1045,
+                    1161
+                ],
+                "score": 0.997,
+                "text": "平台方面，持续推进工艺迭代和产品性能升级。25Q1，在广泛温和复苏的市场环境"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    127,
+                    1170,
+                    973,
+                    1200
+                ],
+                "score": 1.0,
+                "text": "下，BCD、MCU、特殊存储器总体收入环比增长20%左右。在高压显示驱动"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    125,
+                    1207,
+                    1027,
+                    1240
+                ],
+                "score": 0.999,
+                "text": "HVCMOS领域，受限于产能，应用在40nm和28nm的AMOLED小屏显示驱动"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    126,
+                    1247,
+                    1050,
+                    1278
+                ],
+                "score": 0.98,
+                "text": "平台供不应求；此外，公司协同战略客户及战略合作伙伴首推40 纳米HV-RRAM 附"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    126,
+                    1287,
+                    1032,
+                    1317
+                ],
+                "score": 1.0,
+                "text": "加值高及高性价比的显示驱动芯片产品，实现量产及终端行业应用；在图像传感器"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    126,
+                    1326,
+                    945,
+                    1356
+                ],
+                "score": 0.987,
+                "text": "CIS 及图像信号处理器ISP方面，公司持续加大技术平台部署和产能建设。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    97,
+                    1389,
+                    372,
+                    1430
+                ],
+                "score": 0.998,
+                "text": "盈利预测与投资建议"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    97,
+                    1710,
+                    345,
+                    1751
+                ],
+                "score": 0.999,
+                "text": "公司主要财务信息"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    84,
+                    1621,
+                    1048,
+                    1651
+                ],
+                "score": 0.993,
+                "text": "·生产设备难以购买；价格竞争过于激烈；政府补助、投资收益等其他收益不确定的"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    124,
+                    1658,
+                    200,
+                    1694
+                ],
+                "score": 1.0,
+                "text": "风险。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    82,
+                    2243,
+                    719,
+                    2262
+                ],
+                "score": 0.994,
+                "text": "资料来源：公司数据.东方证券研究所预测.每股收益使用最新股本全面摊薄计算."
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1415,
+                    167,
+                    1612,
+                    215
+                ],
+                "score": 0.973,
+                "text": "买入（维持）"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1110,
+                    213,
+                    1369,
+                    253
+                ],
+                "score": 1.0,
+                "text": "股价（2025年05月09日）"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1528,
+                    216,
+                    1622,
+                    252
+                ],
+                "score": 1.0,
+                "text": "85.83元"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1113,
+                    254,
+                    1205,
+                    287
+                ],
+                "score": 1.0,
+                "text": "目标价格"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1520,
+                    254,
+                    1620,
+                    287
+                ],
+                "score": 1.0,
+                "text": "129.48元"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1111,
+                    289,
+                    1302,
+                    324
+                ],
+                "score": 1.0,
+                "text": "52周最高价/最低价"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1499,
+                    287,
+                    1623,
+                    326
+                ],
+                "score": 1.0,
+                "text": "109.5/41元"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1113,
+                    327,
+                    1351,
+                    358
+                ],
+                "score": 0.996,
+                "text": "总股本/流通A股（万股）"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1454,
+                    329,
+                    1616,
+                    358
+                ],
+                "score": 0.988,
+                "text": "798,577/798,577"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1109,
+                    360,
+                    1304,
+                    398
+                ],
+                "score": 0.997,
+                "text": "A股市值（百万元）"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1530,
+                    360,
+                    1623,
+                    397
+                ],
+                "score": 0.997,
+                "text": "685,418"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1111,
+                    399,
+                    1210,
+                    431
+                ],
+                "score": 0.998,
+                "text": "国家/地区"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1567,
+                    396,
+                    1621,
+                    437
+                ],
+                "score": 1.0,
+                "text": "中国"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1107,
+                    426,
+                    1171,
+                    474
+                ],
+                "score": 1.0,
+                "text": "行业"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1560,
+                    428,
+                    1626,
+                    472
+                ],
+                "score": 1.0,
+                "text": "电子"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1112,
+                    471,
+                    1246,
+                    503
+                ],
+                "score": 1.0,
+                "text": "报告发布日期"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1431,
+                    471,
+                    1617,
+                    503
+                ],
+                "score": 1.0,
+                "text": "2025年05月11日"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1116,
+                    1620,
+                    1611,
+                    1645
+                ],
+                "score": 1.0,
+                "text": "下游需求向好持续产能扩充，25Q1淡季不2025-02-16"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1111,
+                    1651,
+                    1141,
+                    1681
+                ],
+                "score": 0.999,
+                "text": "淡"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1116,
+                    1689,
+                    1609,
+                    1711
+                ],
+                "score": 1.0,
+                "text": "二季度营收及毛利率超预期，三季度指引2024-08-13"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1112,
+                    1720,
+                    1160,
+                    1748
+                ],
+                "score": 1.0,
+                "text": "乐观"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1114,
+                    1754,
+                    1610,
+                    1779
+                ],
+                "score": 1.0,
+                "text": "23Q4营收逆转同比下滑趋势，持续推进产2024-04-21"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1115,
+                    1788,
+                    1235,
+                    1811
+                ],
+                "score": 1.0,
+                "text": "能中长期布局"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    1125,
+                    1421,
+                    1211,
+                    1466
+                ],
+                "score": 0.992,
+                "text": "联系人"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    144,
+                    2271,
+                    1499,
+                    2295
+                ],
+                "score": 0.999,
+                "text": "有关分析师的申明，见本报告最后部分。其他重要信息披露见分析师申明之后部分，或请与您的投资代表联系。并请阅读本证券研究报告最后一页的免责申明。"
+            }
+        ],
+        "page_info": {
+            "page_no": 0,
+            "width": 1654,
+            "height": 2339
+        }
+    },
+    {
+        "layout_dets": [
+            {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.9595,
+                "bbox": [
+                    76,
+                    113,
+                    348,
+                    189
+                ],
+                "index": 1
+            },
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.953,
+                "bbox": [
+                    783,
+                    161,
+                    1541,
+                    194
+                ],
+                "index": 2
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.9617,
+                "bbox": [
+                    466,
+                    301,
+                    879,
+                    353
+                ],
+                "index": 3
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9818,
+                "bbox": [
+                    464,
+                    382,
+                    1542,
+                    505
+                ],
+                "index": 4
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.9396,
+                "bbox": [
+                    491,
+                    529,
+                    778,
+                    561
+                ],
+                "index": 5
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9873,
+                "bbox": [
+                    492,
+                    565,
+                    1525,
+                    850
+                ],
+                "index": 6,
+                "html": "<table><tr><td rowspan=1 colspan=1>指标</td><td rowspan=1 colspan=1>关键假设</td></tr><tr><td rowspan=1 colspan=1>无风险利率</td><td rowspan=1 colspan=1>1.63%</td></tr><tr><td rowspan=1 colspan=1>公司beta</td><td rowspan=1 colspan=1>0.9134</td></tr><tr><td rowspan=1 colspan=1>债务成本</td><td rowspan=1 colspan=1>3.60%</td></tr><tr><td rowspan=1 colspan=1>市场收益率Rm</td><td rowspan=1 colspan=1>8.57%</td></tr><tr><td rowspan=1 colspan=1>WACC</td><td rowspan=1 colspan=1>7.92%</td></tr><tr><td rowspan=1 colspan=1>永续增长率</td><td rowspan=1 colspan=1>3.00%</td></tr></table>"
+            },
+            {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.9302,
+                "bbox": [
+                    492,
+                    854,
+                    797,
+                    881
+                ],
+                "index": 7
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.9415,
+                "bbox": [
+                    492,
+                    948,
+                    745,
+                    980
+                ],
+                "index": 8
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9901,
+                "bbox": [
+                    493,
+                    992,
+                    1537,
+                    1447
+                ],
+                "index": 9,
+                "html": "<table><tr><td rowspan=1 colspan=2></td><td rowspan=1 colspan=5>永续增长率</td></tr><tr><td rowspan=10 colspan=1>WACC</td><td rowspan=1 colspan=1>129.48</td><td rowspan=1 colspan=1>1.00%</td><td rowspan=1 colspan=1>2.00%</td><td rowspan=1 colspan=1>3.00%</td><td rowspan=1 colspan=1>4.00%</td><td rowspan=1 colspan=1>5.00%</td></tr><tr><td rowspan=1 colspan=1>5.92%</td><td rowspan=1 colspan=1>166.26</td><td rowspan=1 colspan=1>201.91</td><td rowspan=1 colspan=1>262.01</td><td rowspan=1 colspan=1>384.81</td><td rowspan=1 colspan=1>775.45</td></tr><tr><td rowspan=1 colspan=1>6.42%</td><td rowspan=1 colspan=1>144.06</td><td rowspan=1 colspan=1>171.03</td><td rowspan=1 colspan=1>213.80</td><td rowspan=1 colspan=1>291.96</td><td rowspan=1 colspan=1>480.42</td></tr><tr><td rowspan=1 colspan=1>6.92%</td><td rowspan=1 colspan=1>125.85</td><td rowspan=1 colspan=1>146.71</td><td rowspan=1 colspan=1>178.22</td><td rowspan=1 colspan=1>231.34</td><td rowspan=1 colspan=1>339.87</td></tr><tr><td rowspan=1 colspan=1>7.42%</td><td rowspan=1 colspan=1>110.69</td><td rowspan=1 colspan=1>127.11</td><td rowspan=1 colspan=1>150.96</td><td rowspan=1 colspan=1>188.79</td><td rowspan=1 colspan=1>257.90</td></tr><tr><td rowspan=1 colspan=1>7.92%</td><td rowspan=1 colspan=1>97.90</td><td rowspan=1 colspan=1>111.02</td><td rowspan=1 colspan=1>129.48</td><td rowspan=1 colspan=1>157.36</td><td rowspan=1 colspan=1>204.36</td></tr><tr><td rowspan=1 colspan=1>8.42%</td><td rowspan=1 colspan=1>87.00</td><td rowspan=1 colspan=1>97.62</td><td rowspan=1 colspan=1>112.16</td><td rowspan=1 colspan=1>133.28</td><td rowspan=1 colspan=1>166.76</td></tr><tr><td rowspan=1 colspan=1>8.92%</td><td rowspan=1 colspan=1>77.61</td><td rowspan=1 colspan=1>86.30</td><td rowspan=1 colspan=1>97.93</td><td rowspan=1 colspan=1>114.28</td><td rowspan=1 colspan=1>138.98</td></tr><tr><td rowspan=1 colspan=1>9.42%</td><td rowspan=1 colspan=1>69.47</td><td rowspan=1 colspan=1>76.65</td><td rowspan=1 colspan=1>86.06</td><td rowspan=1 colspan=1>98.94</td><td rowspan=1 colspan=1>117.67</td></tr><tr><td rowspan=1 colspan=1>9.92%</td><td rowspan=1 colspan=1>62.35</td><td rowspan=1 colspan=1>68.33</td><td rowspan=1 colspan=1>76.03</td><td rowspan=1 colspan=1>86.34</td><td rowspan=1 colspan=1>100.84</td></tr></table>"
+            },
+            {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.9241,
+                "bbox": [
+                    491,
+                    1457,
+                    734,
+                    1484
+                ],
+                "index": 10
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.9485,
+                "bbox": [
+                    467,
+                    1552,
+                    657,
+                    1602
+                ],
+                "index": 11
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9477,
+                "bbox": [
+                    465,
+                    1630,
+                    1440,
+                    1667
+                ],
+                "index": 12
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.9011,
+                "bbox": [
+                    142,
+                    2152,
+                    1505,
+                    2181
+                ],
+                "index": 13
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8647,
+                "bbox": [
+                    819,
+                    2264,
+                    842,
+                    2291
+                ],
+                "index": 14
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    162,
+                    118,
+                    350,
+                    170
+                ],
+                "score": 1.0,
+                "text": "东方证券"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    168,
+                    166,
+                    347,
+                    185
+                ],
+                "score": 0.996,
+                "text": "ORIENTSECURITIES"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    494,
+                    950,
+                    743,
+                    978
+                ],
+                "score": 0.999,
+                "text": "图2：股价敏感性分析"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    471,
+                    1630,
+                    1438,
+                    1664
+                ],
+                "score": 1.0,
+                "text": "生产设备难以购买；价格竞争过于激烈；政府补助、投资收益等其他收益不确定的风险。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    466,
+                    1548,
+                    660,
+                    1607
+                ],
+                "score": 1.0,
+                "text": "风险提示"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    149,
+                    2153,
+                    1503,
+                    2177
+                ],
+                "score": 0.999,
+                "text": "有关分析师的申明，见本报告最后部分。其他重要信息披露见分析师申明之后部分，或请与您的投资代表联系。并请阅读本证券研究报告最后一页的免责申明。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    789,
+                    164,
+                    1538,
+                    192
+                ],
+                "score": 0.981,
+                "text": "中芯国际季报点评一产能利用率提升，持续推进工艺迭代和产品性能升级"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    468,
+                    301,
+                    879,
+                    355
+                ],
+                "score": 1.0,
+                "text": "盈利预测与投资建议"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    472,
+                    387,
+                    1539,
+                    412
+                ],
+                "score": 0.998,
+                "text": "我们预测公司25-27年归母净利润分别为56.1/68.0/78.7亿元（原25-26年预测为56.1/71.0亿"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    470,
+                    425,
+                    1538,
+                    457
+                ],
+                "score": 0.962,
+                "text": "元），主要根据24 年年报和 25 年一季报，略调整了营收和毛利率。采用 DCF 估值法，给予"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    471,
+                    472,
+                    847,
+                    501
+                ],
+                "score": 1.0,
+                "text": "129.48元目标价，维持买入评级。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    493,
+                    529,
+                    778,
+                    560
+                ],
+                "score": 0.998,
+                "text": "图1：DCF核心参数假设"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    494,
+                    856,
+                    795,
+                    881
+                ],
+                "score": 1.0,
+                "text": "数据来源：Wind、东方证券研究所"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    493,
+                    1459,
+                    731,
+                    1484
+                ],
+                "score": 1.0,
+                "text": "数据来源：东方证券研究所"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    818,
+                    2262,
+                    844,
+                    2300
+                ],
+                "score": 1.0,
+                "text": "2"
+            }
+        ],
+        "page_info": {
+            "page_no": 1,
+            "width": 1654,
+            "height": 2339
+        }
+    },
+    {
+        "layout_dets": [
+            {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.9549,
+                "bbox": [
+                    76,
+                    113,
+                    349,
+                    189
+                ],
+                "index": 1
+            },
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.953,
+                "bbox": [
+                    784,
+                    161,
+                    1541,
+                    194
+                ],
+                "index": 2
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8432,
+                "bbox": [
+                    467,
+                    303,
+                    567,
+                    353
+                ],
+                "index": 3
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.7791,
+                "bbox": [
+                    145,
+                    381,
+                    606,
+                    414
+                ],
+                "index": 4
+            },
+            {
+                "cls_id": 3,
+                "label": "chart",
+                "score": 0.9461,
+                "bbox": [
+                    148,
+                    418,
+                    831,
+                    829
+                ],
+                "index": 5
+            },
+            {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.9281,
+                "bbox": [
+                    144,
+                    857,
+                    483,
+                    886
+                ],
+                "index": 6
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.9409,
+                "bbox": [
+                    892,
+                    382,
+                    1334,
+                    414
+                ],
+                "index": 7
+            },
+            {
+                "cls_id": 3,
+                "label": "chart",
+                "score": 0.954,
+                "bbox": [
+                    896,
+                    440,
+                    1561,
+                    830
+                ],
+                "index": 8
+            },
+            {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.9252,
+                "bbox": [
+                    892,
+                    857,
+                    1231,
+                    886
+                ],
+                "index": 9
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.9187,
+                "bbox": [
+                    142,
+                    2152,
+                    1506,
+                    2181
+                ],
+                "index": 10
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8583,
+                "bbox": [
+                    819,
+                    2264,
+                    843,
+                    2291
+                ],
+                "index": 11
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    464,
+                    297,
+                    573,
+                    360
+                ],
+                "score": 1.0,
+                "text": "附录"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    162,
+                    118,
+                    350,
+                    170
+                ],
+                "score": 1.0,
+                "text": "东方证券"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    168,
+                    166,
+                    347,
+                    185
+                ],
+                "score": 0.996,
+                "text": "ORIENTSECURITIES"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    149,
+                    2153,
+                    1503,
+                    2177
+                ],
+                "score": 0.999,
+                "text": "有关分析师的申明，见本报告最后部分。其他重要信息披露见分析师申明之后部分，或请与您的投资代表联系。并请阅读本证券研究报告最后一页的免责申明。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    789,
+                    164,
+                    1537,
+                    192
+                ],
+                "score": 0.982,
+                "text": "中芯国际季报点评一产能利用率提升，持续推进工艺迭代和产品性能升级"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    147,
+                    384,
+                    605,
+                    412
+                ],
+                "score": 0.999,
+                "text": "图3：20Q1-24Q4公司月产能（万片/月）"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    894,
+                    384,
+                    1331,
+                    411
+                ],
+                "score": 0.998,
+                "text": "图4：20Q1-24Q4公司逐季产能利用率"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    148,
+                    861,
+                    481,
+                    883
+                ],
+                "score": 1.0,
+                "text": "数据来源：公司公告、东方证券研究所"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    896,
+                    861,
+                    1229,
+                    883
+                ],
+                "score": 1.0,
+                "text": "数据来源：公司公告、东方证券研究所"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    819,
+                    2263,
+                    843,
+                    2293
+                ],
+                "score": 1.0,
+                "text": "3"
+            }
+        ],
+        "page_info": {
+            "page_no": 2,
+            "width": 1654,
+            "height": 2339
+        }
+    },
+    {
+        "layout_dets": [
+            {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.9631,
+                "bbox": [
+                    75,
+                    113,
+                    349,
+                    189
+                ],
+                "index": 1
+            },
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.9507,
+                "bbox": [
+                    784,
+                    161,
+                    1541,
+                    194
+                ],
+                "index": 2
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.8024,
+                "bbox": [
+                    33,
+                    309,
+                    394,
+                    342
+                ],
+                "index": 3
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9863,
+                "bbox": [
+                    30,
+                    360,
+                    824,
+                    1348
+                ],
+                "index": 4,
+                "html": "<table><tr><td colspan=\"6\">资产负债表</td></tr><tr><td>单位：百万元</td><td>2023A</td><td>2024A</td><td>2025E</td><td>2026E</td><td>2027E</td></tr><tr><td>货币资金</td><td>51,235</td><td>48,029</td><td>55,521</td><td>58,944</td><td>62,261</td></tr><tr><td>应收票据、账款及款项融资</td><td>3,944</td><td>3,288</td><td>3,948</td><td>4,471</td><td>5,060</td></tr><tr><td>预付账款</td><td>752</td><td>405</td><td>487</td><td>857</td><td>969</td></tr><tr><td>存货</td><td>19,378</td><td>21,267</td><td>24,669</td><td>24,446</td><td>24,133</td></tr><tr><td>其他</td><td>21,265</td><td>33,289</td><td>31,765</td><td>31,803</td><td>31,646</td></tr><tr><td>流动资产合计</td><td>96,574</td><td>106,279</td><td>116,390</td><td>120,521</td><td>124,069</td></tr><tr><td>长期股权投资</td><td>14,484</td><td>9,004</td><td>12,289</td><td>11,926</td><td>11,073</td></tr><tr><td>固定资产</td><td>92,432</td><td>113,545</td><td>104,379</td><td>97,597</td><td>95,313</td></tr><tr><td>在建工程</td><td>77,003</td><td>88,275</td><td>123,542</td><td>143,310</td><td>146,694</td></tr><tr><td>无形资产</td><td>3,344</td><td>3,225</td><td>2,867</td><td>2,509</td><td>2,150</td></tr><tr><td>其他</td><td>54,626</td><td>33,086</td><td>29,804</td><td>29,804</td><td>29,804</td></tr><tr><td>非流动资产合计</td><td>241,889</td><td>247,137</td><td>272,881</td><td>285,145</td><td>285,034</td></tr><tr><td>资产总计</td><td>338,463</td><td>353,415</td><td>389,272</td><td>405,666</td><td>409,103</td></tr><tr><td>短期借款</td><td>3,398</td><td>1,070</td><td>37,686</td><td>43,052</td><td>34,630</td></tr><tr><td>应付票据及应付账款</td><td>4,940</td><td>5,658</td><td>6,592</td><td>7,349</td><td>8,291</td></tr><tr><td>其他</td><td>44,277</td><td>54,816</td><td>56,840</td><td>58,612</td><td>59,697</td></tr><tr><td>流动负债合计</td><td>52,614</td><td>61,544</td><td>101,119</td><td>109,013</td><td>102,617</td></tr><tr><td>长期借款</td><td>59,032</td><td>57,785</td><td>57,785</td><td>57,785</td><td>57,785</td></tr><tr><td>应付债券</td><td>4,243</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>其他</td><td>4,104</td><td>4,978</td><td>56</td><td>56</td><td>56</td></tr><tr><td>非流动负债合计</td><td>67,379</td><td>62,763</td><td>57,841</td><td>57,841</td><td>57,841</td></tr><tr><td>负债合计</td><td>119,993</td><td>124,308</td><td>158,960</td><td>166,854</td><td>160,459</td></tr><tr><td>少数股东权益</td><td>75,994</td><td>80,917</td><td>82,116</td><td>83,816</td><td>85,783</td></tr><tr><td>实收资本（或股本）</td><td>226</td><td>226</td><td>226</td><td>226</td><td>226</td></tr><tr><td>资本公积</td><td>102,332</td><td>102,906</td><td>102,906</td><td>102,906</td><td>102,906</td></tr><tr><td>留存收益</td><td>35,750</td><td>39,449</td><td>45,063</td><td>51,863</td><td>59,729</td></tr><tr><td>其他</td><td>4,168</td><td>5,609</td><td>0</td><td>0</td><td>0</td></tr><tr><td>股东权益合计</td><td>218,470</td><td>229,108</td><td>230,312</td><td>238,812</td><td>248,644</td></tr><tr><td>负债和股东权益总计</td><td>338,463</td><td>353,415</td><td>389,272</td><td>405,666</td><td>409,103</td></tr></table>"
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9855,
+                "bbox": [
+                    31,
+                    1376,
+                    825,
+                    1978
+                ],
+                "index": 5,
+                "html": "<table><tr><td colspan=\"6\">现金流量表</td></tr><tr><td>单位：百万元</td><td>2023A</td><td>2024A</td><td>2025E</td><td>2026E</td><td>2027E</td></tr><tr><td>净利润</td><td>6,396</td><td>5,373</td><td>6,814</td><td>8,500</td><td>9,833</td></tr><tr><td>折旧摊销</td><td>19,888</td><td>24,021</td><td>27,660</td><td>32,431</td><td>39,316</td></tr><tr><td>财务费用</td><td>(3,774)</td><td>(1,833)</td><td>(690)</td><td>(648)</td><td>(841)</td></tr><tr><td>投资损失</td><td>(250)</td><td>(1,100)</td><td>(727)</td><td>(692)</td><td>(840)</td></tr><tr><td>营运资金变动</td><td>(1,187)</td><td>(7,859)</td><td>(1,322)</td><td>1,692</td><td>1,483</td></tr><tr><td>其它</td><td>1,974</td><td>4,056</td><td>(7,182)</td><td>(42)</td><td>5</td></tr><tr><td>经营活动现金流</td><td>23,048</td><td>22,659</td><td>24,551</td><td>41,239</td><td>48,955</td></tr><tr><td>资本支出</td><td>(57,826)</td><td>(56,003)</td><td>(52,915)</td><td>(45,058)</td><td>(40,058)</td></tr><tr><td>长期投资</td><td>(1,104)</td><td>5,480</td><td>(3,285)</td><td>363</td><td>853</td></tr><tr><td>其他</td><td>17,230</td><td>19,854</td><td>1,835</td><td>863</td><td>1,148</td></tr><tr><td>投资活动现金流</td><td>(41,701)</td><td>(30,669)</td><td>(54,365)</td><td>(43,831)</td><td>(38,057)</td></tr><tr><td>债权融资</td><td>13,086</td><td>13,428</td><td>0</td><td>0</td><td>0</td></tr><tr><td>股权融资</td><td>2,789</td><td>575</td><td>0</td><td>0</td><td>0</td></tr><tr><td>其他</td><td>(147)</td><td>(4,004)</td><td>37,306</td><td>6,014</td><td>(7,581)</td></tr><tr><td>筹资活动现金流</td><td>15,728</td><td>9,999</td><td>37,306</td><td>6,014</td><td>(7,581)</td></tr><tr><td>汇率变动影响</td><td>(1,338)</td><td>(257)</td><td>-0</td><td>-0</td><td>-0</td></tr><tr><td>现金净增加额</td><td>(4,263)</td><td>1,732</td><td>7,492</td><td>3,422</td><td>3,317</td></tr></table>"
+            },
+            {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.9322,
+                "bbox": [
+                    34,
+                    1996,
+                    277,
+                    2025
+                ],
+                "index": 6
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9854,
+                "bbox": [
+                    845,
+                    360,
+                    1610,
+                    1030
+                ],
+                "index": 7,
+                "html": "<table><tr><td colspan=\"6\">利润表</td></tr><tr><td>单位：百万元</td><td>2023A</td><td>2024A</td><td>2025E</td><td>2026E</td><td>2027E</td></tr><tr><td>营业收入</td><td>45,250</td><td>57,796</td><td>69,402</td><td>78,592</td><td>88,944</td></tr><tr><td>营业成本</td><td>35,346</td><td>47,051</td><td>54,820</td><td>61,116</td><td>68,950</td></tr><tr><td>销售费用</td><td>254</td><td>282</td><td>331</td><td>375</td><td>424</td></tr><tr><td>管理费用</td><td>3,153</td><td>3,835</td><td>4,259</td><td>4,665</td><td>5,191</td></tr><tr><td>研发费用</td><td>4,992</td><td>5,447</td><td>5,639</td><td>6,189</td><td>6,871</td></tr><tr><td>财务费用</td><td>(3,774)</td><td>(1,833)</td><td>(690)</td><td>(648)</td><td>(841)</td></tr><tr><td>资产、信用减值损失</td><td>1,334</td><td>525</td><td>217</td><td>128</td><td>114</td></tr><tr><td>公允价值变动收益</td><td>357</td><td>4</td><td>151</td><td>171</td><td>109</td></tr><tr><td>投资净收益</td><td>250</td><td>1,100</td><td>727</td><td>692</td><td>840</td></tr><tr><td>其他</td><td>2,354</td><td>2,707</td><td>2,281</td><td>2,362</td><td>2,372</td></tr><tr><td>营业利润</td><td>6,906</td><td>6,299</td><td>7,985</td><td>9,991</td><td>11,555</td></tr><tr><td>营业外收入</td><td>12</td><td>17</td><td>9</td><td>12</td><td>13</td></tr><tr><td>营业外支出</td><td>77</td><td>23</td><td>16</td><td>39</td><td>26</td></tr><tr><td>利润总额</td><td>6,840</td><td>6,292</td><td>7,979</td><td>9,965</td><td>11,541</td></tr><tr><td>所得税</td><td>444</td><td>919</td><td>1,165</td><td>1,465</td><td>1,709</td></tr><tr><td>净利润</td><td>6,396</td><td>5,373</td><td>6,814</td><td>8,500</td><td>9,833</td></tr><tr><td>少数股东损益</td><td>1,573</td><td>1,674</td><td>1,199</td><td>1,700</td><td>1,967</td></tr><tr><td>归属于母公司净利润</td><td>4,823</td><td>3,699</td><td>5,614</td><td>6,800</td><td>7,866</td></tr><tr><td>每股收益（元）</td><td>0.60</td><td>0.46</td><td>0.70</td><td>0.85</td><td>0.99</td></tr></table>"
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9872,
+                "bbox": [
+                    845,
+                    1071,
+                    1610,
+                    1976
+                ],
+                "index": 8,
+                "html": "<table><tr><td>主要财务比率</td><td></td><td></td><td>2025E</td><td>2026E</td><td>2027E</td></tr><tr><td></td><td>2023A</td><td>2024A</td><td></td><td></td><td></td></tr><tr><td>成长能力 营业收入</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>营业利润</td><td>-9%</td><td>28%</td><td>20%</td><td>13%</td><td>13%</td></tr><tr><td>归属于母公司净利润</td><td>-53%</td><td>-9%</td><td>27%</td><td>25%</td><td>16%</td></tr><tr><td>获利能力</td><td>-60%</td><td>-23%</td><td>52%</td><td>21%</td><td>16%</td></tr><tr><td>毛利率</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>净利率</td><td>21.9%</td><td>18.6%</td><td>21.0%</td><td>22.2%</td><td>22.5%</td></tr><tr><td></td><td>10.7%</td><td>6.4%</td><td>8.1%</td><td>8.7%</td><td>8.8%</td></tr><tr><td>ROE</td><td>3.5%</td><td>2.5%</td><td>3.8%</td><td>4.5%</td><td>4.9%</td></tr><tr><td>ROIC</td><td>1.1%</td><td>1.3%</td><td>1.9%</td><td>2.2%</td><td>2.5%</td></tr><tr><td>偿债能力</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>资产负债率</td><td>35.5%</td><td>35.2%</td><td>40.8%</td><td>41.1%</td><td>39.2%</td></tr><tr><td>净负债率</td><td>9.6%</td><td>15.4%</td><td>28.0%</td><td>27.8%</td><td>22.0%</td></tr><tr><td>流动比率</td><td>1.84</td><td>1.73</td><td>1.15</td><td>1.11</td><td>1.21</td></tr><tr><td>速动比率</td><td>1.43</td><td>1.34</td><td>0.87</td><td>0.85</td><td>0.94</td></tr><tr><td>营运能力</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>应收账款周转率</td><td>10.9</td><td>18.0</td><td>21.6</td><td>21.0</td><td>21.0</td></tr><tr><td>存货周转率</td><td>2.0</td><td>2.1</td><td>2.1</td><td>2.2</td><td>2.5</td></tr><tr><td>总资产周转率</td><td>0.1</td><td>0.2</td><td>0.2</td><td>0.2</td><td>0.2</td></tr><tr><td>每股指标（元）</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>每股收益</td><td>0.60</td><td>0.46</td><td>0.70</td><td>0.85</td><td>0.99</td></tr><tr><td>每股经营现金流</td><td>102.20</td><td>100.10</td><td>108.46</td><td>182.19</td><td>216.28</td></tr><tr><td>每股净资产</td><td>17.84</td><td>18.56</td><td>18.56</td><td>19.41</td><td>20.39</td></tr><tr><td>估值比率</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>市盈率</td><td>149.0</td><td>194.3</td><td>128.0</td><td>105.7</td><td>91.3</td></tr><tr><td>市净率</td><td>5.0</td><td>4.8</td><td>4.8</td><td>4.6</td><td>4.4</td></tr><tr><td>EV/EBITDA</td><td>33.0</td><td>26.7</td><td>21.7</td><td>18.2</td><td>15.2</td></tr><tr><td>EV/EBIT</td><td>242.5</td><td>170.0</td><td>104.1</td><td>81.3</td><td>70.9</td></tr></table>"
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.9021,
+                "bbox": [
+                    142,
+                    2152,
+                    1506,
+                    2181
+                ],
+                "index": 9
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8527,
+                "bbox": [
+                    819,
+                    2265,
+                    842,
+                    2290
+                ],
+                "index": 10
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    38,
+                    311,
+                    391,
+                    339
+                ],
+                "score": 1.0,
+                "text": "附表：财务报表预测与比率分析"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    163,
+                    118,
+                    351,
+                    170
+                ],
+                "score": 1.0,
+                "text": "东方证券"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    168,
+                    166,
+                    347,
+                    185
+                ],
+                "score": 0.996,
+                "text": "ORIENTSECURITIES"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    37,
+                    1999,
+                    274,
+                    2023
+                ],
+                "score": 1.0,
+                "text": "资料来源：东方证券研究所"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    149,
+                    2153,
+                    1503,
+                    2177
+                ],
+                "score": 0.999,
+                "text": "有关分析师的申明，见本报告最后部分。其他重要信息披露见分析师申明之后部分，或请与您的投资代表联系。并请阅读本证券研究报告最后一页的免责申明。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    789,
+                    164,
+                    1537,
+                    192
+                ],
+                "score": 0.982,
+                "text": "中芯国际季报点评一产能利用率提升，持续推进工艺迭代和产品性能升级"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    820,
+                    2264,
+                    842,
+                    2292
+                ],
+                "score": 1.0,
+                "text": "4"
+            }
+        ],
+        "page_info": {
+            "page_no": 3,
+            "width": 1654,
+            "height": 2339
+        }
+    },
+    {
+        "layout_dets": [
+            {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.9595,
+                "bbox": [
+                    76,
+                    113,
+                    348,
+                    189
+                ],
+                "index": 1
+            },
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.9535,
+                "bbox": [
+                    784,
+                    162,
+                    1541,
+                    194
+                ],
+                "index": 2
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.946,
+                "bbox": [
+                    467,
+                    340,
+                    643,
+                    378
+                ],
+                "index": 3
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8692,
+                "bbox": [
+                    465,
+                    401,
+                    1266,
+                    436
+                ],
+                "index": 4
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9824,
+                "bbox": [
+                    464,
+                    463,
+                    1542,
+                    590
+                ],
+                "index": 5
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.9548,
+                "bbox": [
+                    467,
+                    650,
+                    776,
+                    689
+                ],
+                "index": 6
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9727,
+                "bbox": [
+                    466,
+                    713,
+                    1540,
+                    787
+                ],
+                "index": 7
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.9513,
+                "bbox": [
+                    467,
+                    821,
+                    755,
+                    856
+                ],
+                "index": 8
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9513,
+                "bbox": [
+                    511,
+                    876,
+                    1043,
+                    910
+                ],
+                "index": 9
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9493,
+                "bbox": [
+                    511,
+                    930,
+                    1053,
+                    963
+                ],
+                "index": 10
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9528,
+                "bbox": [
+                    512,
+                    984,
+                    1155,
+                    1017
+                ],
+                "index": 11
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9537,
+                "bbox": [
+                    512,
+                    1038,
+                    1057,
+                    1072
+                ],
+                "index": 12
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9751,
+                "bbox": [
+                    514,
+                    1109,
+                    1541,
+                    1186
+                ],
+                "index": 13
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.987,
+                "bbox": [
+                    513,
+                    1225,
+                    1543,
+                    1427
+                ],
+                "index": 14
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.9469,
+                "bbox": [
+                    466,
+                    1532,
+                    764,
+                    1566
+                ],
+                "index": 15
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.953,
+                "bbox": [
+                    515,
+                    1611,
+                    1031,
+                    1644
+                ],
+                "index": 16
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9533,
+                "bbox": [
+                    516,
+                    1665,
+                    1158,
+                    1698
+                ],
+                "index": 17
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9556,
+                "bbox": [
+                    515,
+                    1719,
+                    1036,
+                    1752
+                ],
+                "index": 18
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9768,
+                "bbox": [
+                    514,
+                    1773,
+                    1541,
+                    1846
+                ],
+                "index": 19
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9827,
+                "bbox": [
+                    514,
+                    1865,
+                    1542,
+                    1976
+                ],
+                "index": 20
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8718,
+                "bbox": [
+                    820,
+                    2264,
+                    842,
+                    2290
+                ],
+                "index": 21
+            },
+            {
+                "cls_id": 10,
+                "label": "footnote",
+                "score": 0.5658,
+                "bbox": [
+                    142,
+                    2152,
+                    1505,
+                    2181
+                ],
+                "index": 22
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    162,
+                    118,
+                    350,
+                    170
+                ],
+                "score": 1.0,
+                "text": "东方证券"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    168,
+                    166,
+                    347,
+                    185
+                ],
+                "score": 0.996,
+                "text": "ORIENTSECURITIES"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    468,
+                    338,
+                    644,
+                    380
+                ],
+                "score": 0.999,
+                "text": "分析师申明"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    515,
+                    877,
+                    1040,
+                    911
+                ],
+                "score": 0.996,
+                "text": "买入：相对强于市场基准指数收益率15%以上;"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    520,
+                    1613,
+                    1029,
+                    1644
+                ],
+                "score": 0.994,
+                "text": "看好：相对强于市场基准指数收益率5%以上;"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    520,
+                    1721,
+                    1033,
+                    1752
+                ],
+                "score": 0.999,
+                "text": "看淡：相对于市场基准指数收益率在-5%以下。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    149,
+                    2153,
+                    1503,
+                    2177
+                ],
+                "score": 0.999,
+                "text": "有关分析师的申明，见本报告最后部分。其他重要信息披露见分析师申明之后部分，或请与您的投资代表联系。并请阅读本证券研究报告最后一页的免责申明。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    788,
+                    163,
+                    1538,
+                    192
+                ],
+                "score": 0.986,
+                "text": "中芯国际季报点评一产能利用率提升，持续推进工艺迭代和产品性能升级"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    472,
+                    468,
+                    1536,
+                    493
+                ],
+                "score": 1.0,
+                "text": "分析师在本报告中对所提及的证券或发行人发表的任何建议和观点均准确地反映了其个人对该证"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    471,
+                    510,
+                    1538,
+                    540
+                ],
+                "score": 1.0,
+                "text": "券或发行人的看法和判断；分析师薪酬的任何组成部分无论是在过去、现在及将来，均与其在本"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    471,
+                    556,
+                    1164,
+                    585
+                ],
+                "score": 1.0,
+                "text": "研究报告中所表述的具体建议或观点无任何直接或间接的关系。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    468,
+                    649,
+                    774,
+                    690
+                ],
+                "score": 1.0,
+                "text": "投资评级和相关定义"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    472,
+                    824,
+                    751,
+                    853
+                ],
+                "score": 1.0,
+                "text": "公司投资评级的量化标准"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    470,
+                    1534,
+                    763,
+                    1565
+                ],
+                "score": 0.992,
+                "text": "行业投资评级的量化标准："
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    820,
+                    2263,
+                    842,
+                    2296
+                ],
+                "score": 0.919,
+                "text": "5"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    469,
+                    401,
+                    1266,
+                    438
+                ],
+                "score": 0.996,
+                "text": "每位负责撰写本研究报告全部或部分内容的研究分析师在此作以下声明："
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    470,
+                    715,
+                    1538,
+                    745
+                ],
+                "score": 1.0,
+                "text": "报告发布日后的12个月内行业或公司的涨跌幅相对同期相关证券市场代表性指数的涨跌幅为基准"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    479,
+                    753,
+                    1527,
+                    783
+                ],
+                "score": 0.999,
+                "text": "（A股市场基准为沪深300指数，香港市场基准为恒生指数，美国市场基准为标普500指数）；"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    516,
+                    930,
+                    1051,
+                    964
+                ],
+                "score": 0.999,
+                "text": "增持：相对强于市场基准指数收益率5%～15%;"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    516,
+                    1038,
+                    1054,
+                    1071
+                ],
+                "score": 1.0,
+                "text": "减持：相对弱于市场基准指数收益率在-5%以下。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    517,
+                    984,
+                    1153,
+                    1017
+                ],
+                "score": 0.999,
+                "text": "中性：相对于市场基准指数收益率在-5%～+5%之间波动;"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    521,
+                    1665,
+                    1157,
+                    1698
+                ],
+                "score": 0.999,
+                "text": "中性：相对于市场基准指数收益率在-5%～+5%之间波动;"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    520,
+                    1111,
+                    1538,
+                    1141
+                ],
+                "score": 0.99,
+                "text": "未评级一一由于在报告发出之时该股票不在本公司研究覆盖范围内，分析师基于当时对该股"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    520,
+                    1153,
+                    988,
+                    1183
+                ],
+                "score": 1.0,
+                "text": "票的研究状况，未给予投资评级相关信息。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    520,
+                    1775,
+                    1538,
+                    1805
+                ],
+                "score": 1.0,
+                "text": "未评级：由于在报告发出之时该行业不在本公司研究覆盖范围内，分析师基于当时对该行业"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    520,
+                    1813,
+                    990,
+                    1843
+                ],
+                "score": 1.0,
+                "text": "的研究状况，未给予投资评级等相关信息。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    522,
+                    1229,
+                    1537,
+                    1256
+                ],
+                "score": 0.99,
+                "text": "暂停评级一一根据监管制度及本公司相关规定，研究报告发布之时该投资对象可能与本公司"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    522,
+                    1270,
+                    1537,
+                    1297
+                ],
+                "score": 0.999,
+                "text": "存在潜在的利益冲突情形；亦或是研究报告发布当时该股票的价值和价格分析存在重大不确"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    519,
+                    1307,
+                    1538,
+                    1340
+                ],
+                "score": 1.0,
+                "text": "定性，缺乏足够的研究依据支持分析师给出明确投资评级；分析师在上述情况下暂停对该股"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    521,
+                    1350,
+                    1538,
+                    1381
+                ],
+                "score": 1.0,
+                "text": "票给予投资评级等信息，投资者需要注意在此报告发布之前曾给予该股票的投资评级、盈利"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    522,
+                    1394,
+                    890,
+                    1421
+                ],
+                "score": 0.999,
+                "text": "预测及目标价格等信息不再有效。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    522,
+                    1868,
+                    1538,
+                    1896
+                ],
+                "score": 0.999,
+                "text": "暂停评级：由于研究报告发布当时该行业的投资价值分析存在重大不确定性，缺乏足够的研"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    519,
+                    1902,
+                    1539,
+                    1935
+                ],
+                "score": 1.0,
+                "text": "究依据支持分析师给出明确行业投资评级；分析师在上述情况下暂停对该行业给予投资评级"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    520,
+                    1943,
+                    1413,
+                    1972
+                ],
+                "score": 1.0,
+                "text": "信息，投资者需要注意在此报告发布之前曾给予该行业的投资评级信息不再有效。"
+            }
+        ],
+        "page_info": {
+            "page_no": 4,
+            "width": 1654,
+            "height": 2339
+        }
+    },
+    {
+        "layout_dets": [
+            {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.9541,
+                "bbox": [
+                    129,
+                    106,
+                    404,
+                    184
+                ],
+                "index": 1
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.9391,
+                "bbox": [
+                    466,
+                    324,
+                    595,
+                    361
+                ],
+                "index": 2
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9461,
+                "bbox": [
+                    464,
+                    413,
+                    1468,
+                    447
+                ],
+                "index": 3
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9692,
+                "bbox": [
+                    463,
+                    496,
+                    1533,
+                    563
+                ],
+                "index": 4
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9857,
+                "bbox": [
+                    463,
+                    614,
+                    1534,
+                    781
+                ],
+                "index": 5
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9842,
+                "bbox": [
+                    463,
+                    830,
+                    1535,
+                    964
+                ],
+                "index": 6
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9835,
+                "bbox": [
+                    464,
+                    1013,
+                    1535,
+                    1147
+                ],
+                "index": 7
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9792,
+                "bbox": [
+                    463,
+                    1197,
+                    1534,
+                    1297
+                ],
+                "index": 8
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9811,
+                "bbox": [
+                    463,
+                    1346,
+                    1534,
+                    1448
+                ],
+                "index": 9
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9685,
+                "bbox": [
+                    463,
+                    1497,
+                    1533,
+                    1564
+                ],
+                "index": 10
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9672,
+                "bbox": [
+                    464,
+                    1613,
+                    1533,
+                    1679
+                ],
+                "index": 11
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7601,
+                "bbox": [
+                    112,
+                    1831,
+                    318,
+                    1867
+                ],
+                "index": 12
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9131,
+                "bbox": [
+                    110,
+                    1889,
+                    826,
+                    1927
+                ],
+                "index": 13
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9027,
+                "bbox": [
+                    111,
+                    1939,
+                    432,
+                    1977
+                ],
+                "index": 14
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9038,
+                "bbox": [
+                    111,
+                    1989,
+                    432,
+                    2026
+                ],
+                "index": 15
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.886,
+                "bbox": [
+                    112,
+                    2041,
+                    468,
+                    2077
+                ],
+                "index": 16
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.7209,
+                "bbox": [
+                    110,
+                    2099,
+                    1522,
+                    2184
+                ],
+                "index": 17
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    110,
+                    2035,
+                    196,
+                    2078
+                ],
+                "score": 0.938,
+                "text": "网址："
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    235,
+                    2039,
+                    467,
+                    2080
+                ],
+                "score": 1.0,
+                "text": "www.dfzq.com.cn"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    468,
+                    323,
+                    595,
+                    363
+                ],
+                "score": 0.999,
+                "text": "免责声明"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    218,
+                    113,
+                    406,
+                    162
+                ],
+                "score": 1.0,
+                "text": "东方证券"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    222,
+                    158,
+                    403,
+                    180
+                ],
+                "score": 0.997,
+                "text": "ORIENTSECURITIES"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    116,
+                    1833,
+                    315,
+                    1865
+                ],
+                "score": 1.0,
+                "text": "东方证券研究所"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    471,
+                    833,
+                    1529,
+                    859
+                ],
+                "score": 1.0,
+                "text": "在任何情况下，本报告中的信息或所表述的意见并不构成对任何人的投资建议，也没有考虑到个别客户特殊"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    470,
+                    865,
+                    1529,
+                    893
+                ],
+                "score": 1.0,
+                "text": "的投资目标、财务状况或需求。客户应考虑本报告中的任何意见或建议是否符合其特定状况，若有必要应寻"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    471,
+                    900,
+                    1530,
+                    925
+                ],
+                "score": 1.0,
+                "text": "求专家意见。本报告所载的资料、工具、意见及推测只提供给客户作参考之用，并非作为或被视为出售或购"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    471,
+                    933,
+                    934,
+                    959
+                ],
+                "score": 1.0,
+                "text": "买证券或其他投资标的的邀请或向人作出邀请。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    471,
+                    1018,
+                    1530,
+                    1043
+                ],
+                "score": 1.0,
+                "text": "本报告中提及的投资价格和价值以及这些投资带来的收入可能会波动。过去的表现并不代表未来的表现，未"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    468,
+                    1047,
+                    1531,
+                    1078
+                ],
+                "score": 1.0,
+                "text": "来的回报也无法保证，投资者可能会损失本金。外汇汇率波动有可能对某些投资的价值或价格或来自这一投"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    471,
+                    1083,
+                    1530,
+                    1108
+                ],
+                "score": 1.0,
+                "text": "资的收入产生不良影响。那些涉及期货、期权及其它衍生工具的交易，因其包括重大的市场风险，因此并不"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    471,
+                    1118,
+                    641,
+                    1143
+                ],
+                "score": 1.0,
+                "text": "适合所有投资者。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    471,
+                    1200,
+                    1529,
+                    1226
+                ],
+                "score": 1.0,
+                "text": "在任何情况下，本公司不对任何人因使用本报告中的任何内容所引致的任何损失负任何责任，投资者自主作"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    471,
+                    1234,
+                    1529,
+                    1259
+                ],
+                "score": 1.0,
+                "text": "出投资决策并自行承担投资风险，任何形式的分享证券投资收益或者分担证券投资损失的书面或口头承诺均"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    468,
+                    1261,
+                    558,
+                    1297
+                ],
+                "score": 1.0,
+                "text": "为无效。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    471,
+                    1351,
+                    1530,
+                    1376
+                ],
+                "score": 1.0,
+                "text": "本报告主要以电子版形式分发，间或也会辅以印刷品形式分发，所有报告版权均归本公司所有。未经本公司"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    469,
+                    1381,
+                    1530,
+                    1412
+                ],
+                "score": 1.0,
+                "text": "事先书面协议授权，任何机构或个人不得以任何形式复制、转发或公开传播本报告的全部或部分内容。不得"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    471,
+                    1417,
+                    1442,
+                    1443
+                ],
+                "score": 1.0,
+                "text": "将报告内容作为诉讼、仲裁、传媒所引用之证明或依据，不得用于营利或用于未经允许的其它用途。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    112,
+                    1935,
+                    199,
+                    1979
+                ],
+                "score": 0.991,
+                "text": "电话："
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    241,
+                    1942,
+                    427,
+                    1974
+                ],
+                "score": 1.0,
+                "text": "021-63325888"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    110,
+                    1985,
+                    200,
+                    2029
+                ],
+                "score": 0.973,
+                "text": "传真："
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    240,
+                    1992,
+                    427,
+                    2024
+                ],
+                "score": 1.0,
+                "text": "021-63326786"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    471,
+                    500,
+                    1530,
+                    526
+                ],
+                "score": 1.0,
+                "text": "本报告仅供本公司的客户使用。本公司不会因接收人收到本报告而视其为本公司的当然客户。本报告的全体"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    470,
+                    534,
+                    975,
+                    560
+                ],
+                "score": 1.0,
+                "text": "接收人应当采取必要措施防止本报告被转发给他人。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    470,
+                    1500,
+                    1530,
+                    1526
+                ],
+                "score": 1.0,
+                "text": "经本公司事先书面协议授权刊载或转发的，被授权机构承担相关刊载或者转发责任。不得对本报告进行任何"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    470,
+                    1535,
+                    778,
+                    1561
+                ],
+                "score": 0.999,
+                "text": "有悖原意的引用、删节和修改。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    468,
+                    1615,
+                    1531,
+                    1643
+                ],
+                "score": 0.999,
+                "text": "提示客户及公众投资者慎重使用未经授权刊载或者转发的本公司证券研究报告，慎重使用公众媒体刊载的证"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    468,
+                    1647,
+                    601,
+                    1678
+                ],
+                "score": 1.0,
+                "text": "券研究报告。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    469,
+                    412,
+                    1468,
+                    446
+                ],
+                "score": 0.987,
+                "text": "本证券研究报告（以下简称“本报告”）由东方证券股份有限公司（以下简称“本公司”）制作及发布。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    470,
+                    616,
+                    1519,
+                    644
+                ],
+                "score": 0.999,
+                "text": "本报告是基于本公司认为可靠的且目前已公开的信息撰写，本公司力求但不保证该信息的准确性和完整性，"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    470,
+                    649,
+                    1530,
+                    676
+                ],
+                "score": 1.0,
+                "text": "客户也不应该认为该信息是准确和完整的。同时，本公司不保证文中观点或陈述不会发生任何变更，在不同"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    470,
+                    683,
+                    1530,
+                    710
+                ],
+                "score": 1.0,
+                "text": "时期，本公司可发出与本报告所载资料、意见及推测不一致的证券研究报告。本公司会适时更新我们的研"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    470,
+                    716,
+                    1530,
+                    744
+                ],
+                "score": 1.0,
+                "text": "究，但可能会因某些规定而无法做到。除了一些定期出版的证券研究报告之外，绝大多数证券研究报告是在"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    471,
+                    752,
+                    844,
+                    775
+                ],
+                "score": 1.0,
+                "text": "分析师认为适当的时候不定期地发布。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    112,
+                    1887,
+                    195,
+                    1928
+                ],
+                "score": 0.945,
+                "text": "地址："
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    243,
+                    1891,
+                    823,
+                    1925
+                ],
+                "score": 1.0,
+                "text": "上海市中山南路318号东方国际金融广场26楼"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    118,
+                    2103,
+                    1026,
+                    2123
+                ],
+                "score": 1.0,
+                "text": "东方证券股份有限公司经相关主管机关核准具备证券投资咨询业务资格，据此开展发布证券研究报告业务。"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    116,
+                    2129,
+                    1521,
+                    2153
+                ],
+                "score": 0.999,
+                "text": "东方证券股份有限公司及其关联机构在法律许可的范围内正在或将要与本研究报告所分析的企业发展业务关系。因此，投资者应当考虑到本公司可能存在对报告的客"
+            },
+            {
+                "label": "ocr_text",
+                "bbox": [
+                    114,
+                    2155,
+                    793,
+                    2181
+                ],
+                "score": 1.0,
+                "text": "观性产生影响的利益冲突，不应视本证券研究报告为作出投资决策的唯一因素。"
+            }
+        ],
+        "page_info": {
+            "page_no": 5,
+            "width": 1654,
+            "height": 2245
+        }
+    }
+]

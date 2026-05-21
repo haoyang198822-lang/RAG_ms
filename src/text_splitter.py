@@ -1,4 +1,5 @@
 import json
+import hashlib
 import tiktoken
 from pathlib import Path
 from typing import List, Dict, Optional
@@ -191,16 +192,24 @@ class TextSplitter():
         
         all_md_paths = list(all_md_dir.glob("*.md"))
         output_dir.mkdir(parents=True, exist_ok=True)
+
+        def _fallback_sha1(file_name: str) -> str:
+            return hashlib.sha1(file_name.encode("utf-8")).hexdigest()
+
         for md_path in all_md_paths:
             chunks = self.split_markdown_file(md_path, chunk_size, chunk_overlap)
             output_json_path = output_dir / (md_path.stem + ".json")
-            # 查找 company_name 和 sha1
             file_no_ext = md_path.stem
             company_name = file2company.get(file_no_ext, "")
-            sha1 = file2sha1.get(file_no_ext, "")
-            # metainfo 只保留 sha1、company_name、file_name 字段
+            sha1 = file2sha1.get(file_no_ext, "") or _fallback_sha1(file_no_ext)
+            if not company_name:
+                company_name = file_no_ext
             metainfo = {"sha1": sha1, "company_name": company_name, "file_name": md_path.name}
             with open(output_json_path, 'w', encoding='utf-8') as f:
                 json.dump({"metainfo": metainfo, "content": {"chunks": chunks}}, f, ensure_ascii=False, indent=2)
+            if file_no_ext not in file2sha1:
+                print(f"警告：{md_path.name} 未在 subset.csv 中找到 sha1，已自动生成 fallback sha1={sha1}")
+            if file_no_ext not in file2company:
+                print(f"警告：{md_path.name} 未在 subset.csv 中找到 company_name，已临时使用文件名作为 company_name")
             print(f"已处理: {md_path.name} -> {output_json_path.name}")
         print(f"共分割 {len(all_md_paths)} 个 markdown 文件")

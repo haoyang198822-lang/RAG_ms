@@ -82,68 +82,33 @@ class BM25Retriever:
 
 class VectorRetriever:
     def __init__(self, vector_db_dir: Path, documents_dir: Path, embedding_provider: str = "openai"):
-        # 初始化向量检索器，加载所有向量库和文档
         self.vector_db_dir = vector_db_dir
         self.documents_dir = documents_dir
         self.all_dbs = self._load_dbs()
-        # 默认使用代理的 OpenAI 兼容接口作为 embedding provider
         self.embedding_provider = embedding_provider.lower()
         self.llm = None
 
     def _set_up_llm(self):
-        # 根据 embedding_provider 初始化对应的 LLM 客户端
         load_dotenv(dotenv_path=Path(__file__).resolve().parents[1] / ".env")
-        if self.embedding_provider == "openai":
-            api_key = os.getenv("AGICTO_API_KEY") or os.getenv("OPENAI_API_KEY")
-            base_url = os.getenv("AGICTO_BASE_URL") or os.getenv("OPENAI_BASE_URL") or "https://api.agicto.cn/v1"
-            llm = OpenAI(
-                api_key=api_key,
-                base_url=base_url,
-                timeout=None,
-                max_retries=2
-            )
-            return llm
-        elif self.embedding_provider == "dashscope":
-            import dashscope
-            dashscope.api_key = os.getenv("DASHSCOPE_API_KEY")
-            return None  # dashscope 不需要 client 对象
-        else:
-            raise ValueError(f"不支持的 embedding provider: {self.embedding_provider}")
+        api_key = os.getenv("AGICTO_API_KEY") or os.getenv("OPENAI_API_KEY")
+        base_url = os.getenv("AGICTO_BASE_URL") or os.getenv("OPENAI_BASE_URL") or "https://api.agicto.cn/v1"
+        return OpenAI(
+            api_key=api_key,
+            base_url=base_url,
+            timeout=None,
+            max_retries=2,
+        )
 
     def _get_embedding(self, text: str, model: str | None = None):
-        # 根据 embedding_provider 获取文本的向量表示
-        if self.embedding_provider == "openai":
-            if self.llm is None:
-                self.llm = self._set_up_llm()
-            if model is None:
-                model = os.getenv("AGICTO_EMBEDDING_MODEL") or os.getenv("OPENAI_EMBEDDING_MODEL") or "text-embedding-3-small"
-            embedding = self.llm.embeddings.create(
-                input=text,
-                model=model
-            )
-            return embedding.data[0].embedding
-        elif self.embedding_provider == "dashscope":
-            import dashscope
-            rsp = dashscope.TextEmbedding.call(
-                model=model or "text-embedding-v1",
-                input=[text]
-            )
-            # 兼容 dashscope 返回格式，不能用 resp.output，需用 resp['output']
-            if 'output' in rsp and 'embeddings' in rsp['output']:
-                # 多条输入（本处只有一条）
-                emb = rsp['output']['embeddings'][0]
-                if emb['embedding'] is None or len(emb['embedding']) == 0:
-                    raise RuntimeError(f"DashScope返回的embedding为空，text_index={emb.get('text_index', None)}")
-                return emb['embedding']
-            elif 'output' in rsp and 'embedding' in rsp['output']:
-                # 兼容单条输入格式
-                if rsp['output']['embedding'] is None or len(rsp['output']['embedding']) == 0:
-                    raise RuntimeError("DashScope返回的embedding为空")
-                return rsp['output']['embedding']
-            else:
-                raise RuntimeError(f"DashScope embedding API返回格式异常: {rsp}")
-        else:
-            raise ValueError(f"不支持的 embedding provider: {self.embedding_provider}")
+        if self.llm is None:
+            self.llm = self._set_up_llm()
+        if model is None:
+            model = os.getenv("AGICTO_EMBEDDING_MODEL") or os.getenv("OPENAI_EMBEDDING_MODEL") or "text-embedding-v4"
+        embedding = self.llm.embeddings.create(
+            input=text,
+            model=model,
+        )
+        return embedding.data[0].embedding
 
     @staticmethod
     def set_up_llm():
@@ -194,9 +159,8 @@ class VectorRetriever:
 
     @staticmethod
     def get_strings_cosine_similarity(str1, str2):
-        # 计算两个字符串的余弦相似度（通过嵌入）
         llm = VectorRetriever.set_up_llm()
-        model = os.getenv("AGICTO_EMBEDDING_MODEL") or os.getenv("OPENAI_EMBEDDING_MODEL") or "text-embedding-3-small"
+        model = os.getenv("AGICTO_EMBEDDING_MODEL") or os.getenv("OPENAI_EMBEDDING_MODEL") or "text-embedding-v4"
         embeddings = llm.embeddings.create(input=[str1, str2], model=model)
         embedding1 = embeddings.data[0].embedding
         embedding2 = embeddings.data[1].embedding
@@ -237,10 +201,7 @@ class VectorRetriever:
         expected_dim = getattr(vector_db, "d", None)
         embedding_model = os.getenv("AGICTO_EMBEDDING_MODEL") or os.getenv("OPENAI_EMBEDDING_MODEL")
         if not embedding_model:
-            if expected_dim == 1536:
-                embedding_model = "text-embedding-3-small"
-            elif expected_dim == 3072:
-                embedding_model = "text-embedding-3-large"
+            embedding_model = "text-embedding-v4"
         embedding = self._get_embedding(query, model=embedding_model)
         embedding_array = np.array(embedding, dtype=np.float32).reshape(1, -1)
         if expected_dim is not None and embedding_array.shape[1] != expected_dim:
